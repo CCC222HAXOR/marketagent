@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   try {
     const output = await marketAnalystAgent(input);
     res.status(200).json({ output });
-  } catch (error) {
+  } catch (err) {
     res.status(500).json({ error: 'Agent failed' });
   }
 }
